@@ -14,16 +14,16 @@ public class logout extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doget È£Ãâ....");
+		System.out.println("doget È£ï¿½ï¿½....");
 		this.doPost(request, response);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		session.invalidate(); //¼¼¼Ç Á¤º¸ Áö¿ì±â
+		session.invalidate(); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 		response.setContentType("text/html;charset=UTF-8");
 		response.sendRedirect("./session/LoginForm.html");
-
+		System.out.println("ì§€í¬ê°€ ìˆ˜ì •í•¨");
 	}
 }
